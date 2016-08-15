@@ -97,10 +97,25 @@ public class PilotoDAO {
             e.printStackTrace();
         }
 
-        return pilotos;
+        return pilotos.iterator();
     }
 
 
+     public Iterator ExibirListaIterador(){
+         List<Piloto> fila = new LinkedList<>();
+         for(Piloto p :ConsultarTodos()){
+             fila.add(p);
+         }
+         return fila.iterator();
+     }
+
+     public Iterator ExibirListaPilhaIterator(){
+         Stack pilha = new Stack();
+         for(Piloto p:ConsultarTodos()){
+             pilha.push(p);
+         }
+         return pilha.iterator();
+     }
 
 
 

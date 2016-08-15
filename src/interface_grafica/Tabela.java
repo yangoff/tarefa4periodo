@@ -38,6 +38,12 @@ public class Tabela extends javax.swing.JFrame {
         BTNarray = new javax.swing.JButton();
         BTNpilha = new javax.swing.JButton();
         BTNfila = new javax.swing.JButton();
+        BTNarrayI = new javax.swing.JButton();
+        BTNpilhaI = new javax.swing.JButton();
+        BTNfilaI = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,32 +78,87 @@ public class Tabela extends javax.swing.JFrame {
             }
         });
 
+        BTNarrayI.setText("ArrayLS");
+        BTNarrayI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNarrayIActionPerformed(evt);
+            }
+        });
+
+        BTNpilhaI.setText("Pilha");
+        BTNpilhaI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNpilhaIActionPerformed(evt);
+            }
+        });
+
+        BTNfilaI.setText("Fila");
+        BTNfilaI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNfilaIActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Normal");
+
+        jLabel2.setText("Iterator");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 632, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BTNpilha, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BTNarray)
-                    .addComponent(BTNfila, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(BTNarrayI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(BTNpilha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(BTNarray, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(BTNfila, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(BTNpilhaI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(BTNfilaI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(25, 25, 25))
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(jLabel2)))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
                         .addComponent(BTNarray)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(BTNpilha)
                         .addGap(18, 18, 18)
-                        .addComponent(BTNfila))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(BTNfila)
+                        .addGap(18, 18, 18)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(BTNarrayI)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(BTNpilhaI)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(BTNfilaI)))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -122,29 +183,17 @@ public class Tabela extends javax.swing.JFrame {
     }//GEN-LAST:event_BTNarrayActionPerformed
 
     private void BTNpilhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNpilhaActionPerformed
-//        try {
-//           DAO=new PilotoDAO();
-//            for (Object p:DAO.ExibirListaPilha()) {
-//                Piloto pilo = (Piloto)p;
-//                 Model.addRow(new Object[]{pilo.getCodigo(),pilo.getNome(),pilo.getPais(),pilo.getIdade(),pilo.getEquipe(),pilo.getMotor(),pilo.getPontos()});
-//            }
-//        } catch (Exception e) {
-//        }
-
-try {
-             DAO= new PilotoDAO();
-            for(Piloto piloto:DAO.()){ 
-           
-             Model.addRow(new Object[]{piloto.getCodigo(),piloto.getNome(),piloto.getPais(),piloto.getIdade(),piloto.getEquipe(),piloto.getMotor(),piloto.getPontos()});
-       
+        try {
+           DAO=new PilotoDAO();
+            for (Object p:DAO.ExibirListaPilha()) {
+                Piloto pilo = (Piloto)p;
+                 Model.addRow(new Object[]{pilo.getCodigo(),pilo.getNome(),pilo.getPais(),pilo.getIdade(),pilo.getEquipe(),pilo.getMotor(),pilo.getPontos()});
             }
-        
-        
-        
-        
         } catch (Exception e) {
         }
-       
+
+
+         
     }//GEN-LAST:event_BTNpilhaActionPerformed
 
     private void BTNfilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNfilaActionPerformed
@@ -162,6 +211,35 @@ try {
         } catch (Exception e) {
         }
     }//GEN-LAST:event_BTNfilaActionPerformed
+
+    private void BTNarrayIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNarrayIActionPerformed
+        // TODO add your handling code here:
+        try {
+             DAO= new PilotoDAO();
+             
+             
+            for(Piloto piloto:DAO.ConsultarTodosIterador()){ 
+           
+             Model.addRow(new Object[]{piloto.getCodigo(),piloto.getNome(),piloto.getPais(),piloto.getIdade(),piloto.getEquipe(),piloto.getMotor(),piloto.getPontos()});
+       
+            }
+        
+        
+        
+        
+        } catch (Exception e) {
+        }
+       
+    }         
+    }//GEN-LAST:event_BTNarrayIActionPerformed
+
+    private void BTNpilhaIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNpilhaIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BTNpilhaIActionPerformed
+
+    private void BTNfilaIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNfilaIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BTNfilaIActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,9 +278,15 @@ try {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTNarray;
+    private javax.swing.JButton BTNarrayI;
     private javax.swing.JButton BTNfila;
+    private javax.swing.JButton BTNfilaI;
     private javax.swing.JButton BTNpilha;
+    private javax.swing.JButton BTNpilhaI;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
 }
