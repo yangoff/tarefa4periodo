@@ -27,23 +27,6 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jScrollPane2" min="-2" pref="632" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="BTNarrayI" max="32767" attributes="0"/>
-                                  <Component id="BTNpilha" max="32767" attributes="0"/>
-                                  <Component id="BTNarray" max="32767" attributes="0"/>
-                                  <Component id="BTNfila" max="32767" attributes="0"/>
-                                  <Component id="BTNpilhaI" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="BTNfilaI" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jSeparator1" alignment="1" min="-2" pref="106" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -56,6 +39,24 @@
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace type="separate" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jSeparator1" alignment="1" min="-2" pref="106" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="BTNarrayI" max="32767" attributes="0"/>
+                                  <Component id="BTNpilha" max="32767" attributes="0"/>
+                                  <Component id="BTNarray" max="32767" attributes="0"/>
+                                  <Component id="BTNfila" max="32767" attributes="0"/>
+                                  <Component id="BTNpilhaI" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="BTNfilaI" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jButton1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
           </Group>
@@ -86,6 +87,8 @@
                       <Component id="BTNpilhaI" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="BTNfilaI" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="19" max="32767" attributes="0"/>
@@ -219,6 +222,14 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Iterator"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Set"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

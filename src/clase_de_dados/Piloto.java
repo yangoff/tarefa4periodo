@@ -19,6 +19,9 @@ public class Piloto {
     String motor;
     int pontos;
 
+    public Piloto(){
+    }
+    
     public int getCodigo() {
         return codigo;
     }
